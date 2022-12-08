@@ -1,7 +1,77 @@
+@font-face {
+    font-family: roboto-bold;
+    src: url(fonts/Roboto-Bold.ttf);
+  }
+
+* {
+    font-family: roboto-bold, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: rgb(64, 76, 87);
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    max-height: 100vh;
 }
 
 .profile-pic {
-    max-width: 75px;
+    max-width: 50px;
+    border-radius: 25px;
+}
+
+.profile-pic-big {
+    width: 70px;
+    border-radius: 35px;
+}
+
+.header {
+    background-color: #fff;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.sidebar {
+    color: #fff;
+    background-color: #1992d4;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.main-heading {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+.main-content {
+     grid-column: 2 / 3;
+     display: grid;
+     grid-template-columns: 3fr 1fr;
+     grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / 3;
+}
+
+.card {
+    background-color: #fff;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row-one .right,
+.row-two .left {
+    display: flex;
+    align-items: center;
 }
